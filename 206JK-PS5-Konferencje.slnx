@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Konferencje.Application/Konferencje.Application.csproj" />
+  <Project Path="Konferencje.Domain/Konferencje.Domain.csproj" />
+  <Project Path="Konferencje.Infrastructure/Konferencje.Infrastructure.csproj" />
   <Project Path="Konferencje.MVC/Konferencje.MVC.csproj" />
 </Solution>
