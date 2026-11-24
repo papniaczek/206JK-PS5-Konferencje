@@ -10,6 +10,8 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<User> Users => Set<User>();
+    public DbSet<ParticipantProfile> ParticipantProfiles => Set<ParticipantProfile>();
+    public DbSet<EventRegistration> EventRegistrations => Set<EventRegistration>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
