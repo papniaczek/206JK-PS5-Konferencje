@@ -1,24 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Konferencje.Domain.Common;
+using Konferencje.Domain.Enums;
 
 namespace Konferencje.Domain.Entities;
 
-public enum RegistrationStatus
+public class EventRegistration : BaseEntity
 {
-    Pending,
-    Confirmed,
-    Reserve,
-    Canceled
-}
-
-public class EventRegistration
-{
-    public int Id { get; set; }
-
     [Required] public int EventId { get; set; }
 
     [Required] public int UserId { get; set; }
-
-    [Required] public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     [Required] public RegistrationStatus Status { get; set; } = RegistrationStatus.Pending;
 
