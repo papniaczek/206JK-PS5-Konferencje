@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Konferencje.Domain.Common;
+using Konferencje.Domain.Enums;
 
 namespace Konferencje.Domain.Entities;
 
@@ -26,4 +27,10 @@ public class Event : BaseEntity
     [Required]
     [Range(1, int.MaxValue, ErrorMessage = "Limit miejsc musi wynosić co najmniej 1.")]
     public int MaxParticipants { get; set; }
+
+    [Required]
+    public EventType Type { get; set; }
+
+    [Required]
+    public EventMode Mode { get; set; }
 }
